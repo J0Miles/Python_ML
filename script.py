@@ -23,3 +23,21 @@ print(dataset.shape)
 
 # head
 print(dataset.head(20))
+
+# descriptions
+print(dataset.describe())
+
+# Class distrubution
+print(dataset.groupby('class').size())
+
+# Univariate Plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
+
+# histograms
+dataset.hist()
+plt.show()
+
+# scatter plot matrix
+scatter_matrix(dataset)
+plt.show()
